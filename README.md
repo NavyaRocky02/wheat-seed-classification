@@ -78,3 +78,34 @@ The improved notebook uses stratified cross-validation and GridSearchCV for mode
 
 ## 📄 License
 This project is available for educational and learning purposes.
+
+
+## 📊 Model Performance
+
+- **Test Accuracy:** 90.48%
+- **Best Cross-Validation Accuracy:** 92.25%
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- Scikit-learn
+- Random Forest
+- Streamlit
+
+## 🚀 How to Run the Project
+
+1. Clone or download this repository.
+2. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Streamlit application:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+4. Open the local URL displayed in the terminal to use the application.
