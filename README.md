@@ -41,6 +41,13 @@ The dataset contains **210 samples**, seven input features, and one target varia
 
 Dataset file: `seeds.csv`
 
+## 📓 Jupyter Notebooks
+
+This project includes two Jupyter Notebooks:
+
+- `1_Improved_Wheat_Seed_Classification.ipynb` – Earlier implementation and experimentation.
+- `01_Improved_Wheat_Seed_Classification.ipynb` – Updated implementation with model evaluation and improvements.
+
 ## 🧹 Data Preprocessing and Analysis
 
 The Jupyter Notebook includes:
