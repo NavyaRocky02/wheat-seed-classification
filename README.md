@@ -1,111 +1,186 @@
 # 🌾 Wheat Seed Classification Using Machine Learning
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?logo=scikitlearn&logoColor=white">
+  <img src="https://img.shields.io/badge/Framework-Streamlit-red?logo=streamlit&logoColor=white">
+  <img src="https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter&logoColor=white">
+</p>
+
 ## 📌 Project Overview
-This project uses machine learning to classify wheat seeds into three varieties: Kama, Rosa, and Canadian, based on their physical measurements. A Streamlit web application allows users to enter seed measurements and receive a predicted variety.
+
+This project uses machine learning to classify wheat seeds into three varieties: **Kama, Rosa, and Canadian**, based on their physical measurements.
+
+The project includes a Jupyter Notebook for data analysis and model development, along with a Streamlit web application that allows users to enter seed measurements and receive a predicted variety.
 
 ## 🎯 Objectives
+
 - Explore and analyze the wheat seed dataset.
-- Train and evaluate multiple machine learning models.
+- Perform data preprocessing and exploratory data analysis.
+- Train and compare multiple machine learning algorithms.
 - Improve model performance using cross-validation and hyperparameter tuning.
-- Build an interactive web application for predictions.
+- Develop an interactive web application for wheat seed classification.
 
 ## 📊 Dataset
-The dataset contains 210 samples, with seven input features and one target label.
 
-**Features:**
-- Area
-- Perimeter
-- Compactness
-- Kernel Length
-- Kernel Width
-- Asymmetry Coefficient
-- Kernel Groove Length
+The dataset contains **210 samples**, seven input features, and one target variable.
 
-**Target:** Wheat seed variety (1, 2, or 3).
+**Input Features:**
+1. Area
+2. Perimeter
+3. Compactness
+4. Kernel Length
+5. Kernel Width
+6. Asymmetry Coefficient
+7. Kernel Groove Length
+
+**Target Classes:**
+- Kama
+- Rosa
+- Canadian
+
+Dataset file: `seeds.csv`
+
+## 🧹 Data Preprocessing and Analysis
+
+The Jupyter Notebook includes:
+
+- Dataset loading using Pandas.
+- Data inspection and exploration.
+- Data preprocessing.
+- Feature and target separation.
+- Model training and evaluation.
 
 ## 🤖 Machine Learning Models
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Random Forest
 
-The improved notebook uses stratified cross-validation and GridSearchCV for model tuning.
+I experimented with three supervised machine learning algorithms:
 
-## 🛠️ Technologies Used
-- Python
-- Pandas and NumPy
-- Scikit-learn
-- Matplotlib
-- Jupyter Notebook
-- Streamlit
-- Joblib
+**1. K-Nearest Neighbors (KNN)**
 
-## 🚀 Run the Project Locally
+Classifies a sample based on its nearest data points.
 
-1. Clone this repository:
+**2. Decision Tree Classifier**
 
-   ```bash
-   git clone https://github.com/NavyaRocky02/wheat-seed-classification.git
-   cd wheat-seed-classification
-   ```
+Uses feature-based decision rules to classify wheat seeds.
 
-2. Install the required packages:
+**3. Random Forest Classifier**
 
-   ```bash
-   pip install streamlit pandas scikit-learn joblib
-   ```
+Combines multiple decision trees to produce a classification result.
 
-3. Make sure `improved_wheat_seed_model.pkl` is in the same folder as `app.py`.
+### ⚙️ Model Optimization
 
-4. Start the application:
+- Stratified Cross-Validation
+- GridSearchCV for hyperparameter tuning
 
-   ```bash
-   streamlit run app.py
-   ```
+## 📈 Model Performance
 
-5. Open the local URL displayed in the terminal.
+| Evaluation Metric | Accuracy |
+|---|---:|
+| Test Accuracy | 90.48% |
+| Best Cross-Validation Accuracy | 92.25% |
 
-## 📁 Project Files
-- `01_Wheat_Seed_Classification.ipynb` — Initial model development.
-- `02_Improved_Wheat_Seed_Classification.ipynb` — Model evaluation and tuning.
-- `app.py` — Streamlit application.
-- `seeds.csv` — Dataset.
-- `improved_wheat_seed_model.pkl` — Trained model required by the application.
+## 🛠️ Technologies and Libraries Used
 
-## 👩‍💻 Future Improvements
-- Add model performance visualizations.
+| Technology | Purpose |
+|---|---|
+| Python | Programming language |
+| Pandas | Data manipulation |
+| NumPy | Numerical operations |
+| Scikit-learn | Machine learning |
+| Matplotlib | Data visualization |
+| Jupyter Notebook | Model development |
+| Streamlit | Web application |
+| Joblib | Model saving and loading, if used |
+
+## 🖥️ Application Screenshots
+
+### 🏠 Application Homepage
+
+![Homepage](Homepage.png)
+
+### 📥 Seed Measurement Inputs
+
+![Seed Inputs](seed-inputs.png)
+
+### 📊 Prediction Probabilities
+
+![Prediction Probabilities](prediction-probabilities.png)
+
+## 📁 Project Structure
+
+```text
+wheat-seed-classification/
+│
+├── 01_Improved_Wheat_Seed_Classification.ipynb
+├── 1_Improved_Wheat_Seed_Classification.ipynb
+├── app.py
+├── seeds.csv
+├── improved_wheat_seed_model.pkl
+├── requirements.txt
+├── README.md
+│
+├── Homepage.png
+├── seed-inputs.png
+└── prediction-probabilities.png
+```
+
+## 🚀 Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/NavyaRocky02/wheat-seed-classification.git
+cd wheat-seed-classification
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate on Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Streamlit Application
+
+```bash
+streamlit run app.py
+```
+
+### 5. Open the Application
+
+Open the local URL displayed in the terminal:
+
+```text
+http://localhost:8501
+```
+
+## 🔮 Future Improvements
+
+- Add more model performance visualizations.
 - Improve input validation and user experience.
+- Compare additional machine learning algorithms.
 - Deploy the application online.
 
+## 📚 Learning Outcomes
+
+- Data preprocessing and analysis.
+- Exploratory Data Analysis.
+- Feature engineering.
+- Supervised machine learning.
+- Model evaluation and optimization.
+- Web application development using Streamlit.
+
 ## 📄 License
-This project is available for educational and learning purposes.
 
-
-## 📊 Model Performance
-
-- **Test Accuracy:** 90.48%
-- **Best Cross-Validation Accuracy:** 92.25%
-
-## 🛠️ Technologies Used
-
-- Python
-- Pandas
-- Scikit-learn
-- Random Forest
-- Streamlit
-
-## 🚀 How to Run the Project
-
-1. Clone or download this repository.
-2. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the Streamlit application:
-
-   ```bash
-   streamlit run app.py
-   ```
-
-4. Open the local URL displayed in the terminal to use the application.
+This project is developed for educational and learning purposes.
